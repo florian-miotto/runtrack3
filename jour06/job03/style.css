@@ -1,0 +1,65 @@
+/* Job 02
+
+Créez un fichier index.html contenant les balises de structure html de base (<doctype>,
+<html>, <head>, <body>).
+Créez un fichier style.css et ajouter des propriétés permettant à votre body d’avoir une
+couleur de background #88c1d0.
+A l’aide des media queries, cette couleur doit évoluer de la façon suivante :
+● #ffca4b lorsque la résolution est comprise entre 1680px et 1920px
+● #275fa0 lorsque la résolution est comprise entre 1280px et 1680px
+● #ffffff lorsque la résolution est inférieure à 1280px */
+
+body {
+    background-color: #222;
+}
+
+.pack {
+    display: flex;
+
+}
+
+section {
+    background-color: #88c1d0;
+    width: 250px;
+    height: 150px;
+    margin: 5px;
+
+}
+
+
+@media (max-device-width : 767px) {
+    body {
+        background-color: #ffffff;
+    }
+
+    .pack {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (min-device-width : 768px) and (max-device-width : 1599px) {
+    body {
+        background-color: #275fa0;
+    }
+
+    .pack {
+        display: flex;
+        flex-wrap: wrap;
+        width: 550px;
+    }
+}
+
+@media (max-device-width : 1600px) {
+    body {
+        background-color: #ffffff;
+    }
+
+    .pack {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+}

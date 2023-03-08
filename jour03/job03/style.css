@@ -1,0 +1,108 @@
+body {
+  background-color: #f2f2f2;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  margin: 0;
+}
+
+
+#gameboard {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: #ddd;
+    border: 2px solid #999;
+    border-radius: 5px;
+  }
+  
+  .tile {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .tile img {
+    width: 100px;
+    height: 100px;
+    /* margin-left: -100px;
+    margin-top: -100px; */
+  }
+  
+  #tile1 {
+    top: 0;
+    left: 0;
+  }
+  
+  #tile2 {
+    top: 0;
+    left: 100px;
+  }
+  
+  #tile3 {
+    top: 0;
+    left: 200px;
+  }
+  
+  #tile4 {
+    top: 100px;
+    left: 0;
+  }
+  
+  #tile5 {
+    top: 100px;
+    left: 100px;
+  }
+  
+  #tile6 {
+    top: 100px;
+    left: 200px;
+  }
+  
+  #tile7 {
+    top: 200px;
+    left: 0;
+  }
+  
+  #tile8 {
+    top: 200px;
+    left: 100px;
+  }
+  
+  #tile9 {
+    top: 200px;
+    left: 200px;
+  }
+  
+  #message {
+    margin-top: 20px;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  button {
+    margin-top: 20px;
+    font-size: 24px;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #ccc;
+    border: 1px solid #999;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #999;
+    color: #fff;
+  }
+  
+  h1 {
+    text-align: center;
+  }

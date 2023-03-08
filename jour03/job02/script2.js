@@ -12,22 +12,33 @@
 $(document).ready(function () {
     var correctOrder = ["arc1", "arc2", "arc3", "arc4", "arc5", "arc6"];
     var currentOrder = [];
+    var maxImages = 6;
 
     $("#images-container .image").click(function () {
+        // check if the maximum number of images has been selected
+        if (currentOrder.length >= maxImages) {
+            return false;
+        }
+
         var imageId = $(this).attr("id");
         var imageClone = $(this).clone();
         imageClone.attr("id", imageId + "_clone");
         imageClone.appendTo("#display-container");
         currentOrder.push(imageId);
-        if (currentOrder.length === 6) {
+
+        // disable click event for remaining images if maximum has been reached
+        if (currentOrder.length === maxImages) {
+            $("#images-container .image:not(.disabled)").addClass("disabled").off("click");
             checkOrder();
         }
     });
+
 
     $("#shuffle").click(function () {
         // shuffle the images
         $("#images-container .image").shuffle();
     });
+
 
     function checkOrder() {
         var solved = true;
@@ -40,7 +51,7 @@ $(document).ready(function () {
         if (solved) {
             $("#message").text("Vous avez gagné").css("color", "green");
         } else {
-            $("#message").text("Vous avez perdu").css("color", "red");
+            $("#message").text("Vous avez perrrrrdu").css("color", "red");
         }
     }
 
